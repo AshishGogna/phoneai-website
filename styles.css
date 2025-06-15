@@ -205,8 +205,17 @@ img {
 
 .footer-logo {
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
+}
+
+.footer-logo span {
+    width: 100%;
+}
+
+.footer-logo > div {
+    display: flex;
+    flex-direction: column;
 }
 
 .footer-logo .logo-img {
@@ -265,6 +274,29 @@ nav .btn-outline::after {
 .hero-text {
     flex: 1;
     min-width: 300px;
+}
+
+.hero h1 {
+    background: linear-gradient(90deg, #10b981, #22c55e, #3b82f6, #22c55e, #10b981);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    animation: gradientFlow 8s ease infinite;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .video-carousel-container {
@@ -778,6 +810,14 @@ box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
     font-size: 0.9rem;
 }
 
+
+.footer-logo-text {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-top: 0.25rem;
+}
+
 .social-links {
     display: flex;
     gap: 1rem;
@@ -804,9 +844,9 @@ box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
 .blur-circle-1, .blur-circle-2 {
     position: fixed;
     border-radius: 50%;
-    filter: blur(100px);
+    filter: blur(300px);
     z-index: -1;
-    opacity: 0.5;
+    opacity: 1;
 }
 
 .blur-circle-1 {
