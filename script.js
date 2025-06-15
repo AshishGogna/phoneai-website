@@ -80,8 +80,50 @@ class VideoCarousel {
     }
 }
 
+// Tab notification effect
+function setupTabNotifications() {
+    const originalTitle = document.title;
+    const messages = [
+        "AI-Powered Calls!",
+        "Future of Calling",
+        "Try Phone AI Today!",
+        "AI Agents for Calls"
+    ];
+    
+    let counter = 0;
+    let isBlinking = false;
+    
+    // Change title function
+    function updateTitle() {
+        document.title = messages[counter % messages.length];
+        counter++;
+        
+        // Blink effect when tab is active
+        if (document.hasFocus()) {
+            isBlinking = !isBlinking;
+            if (isBlinking) {
+                document.title = `${document.title}`;
+            }
+        }
+    }
+    
+    // Initial update
+    updateTitle();
+    
+    // Update title every 2 seconds
+    setInterval(updateTitle, 2000);
+    
+    // Reset to original title when tab becomes visible
+    document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) {
+            document.title = originalTitle;
+        }
+    });
+}
+
 // Initialize video carousel when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    setupTabNotifications();
     const carouselContainer = document.querySelector('.video-carousel-container');
     if (carouselContainer) {
         new VideoCarousel(carouselContainer);

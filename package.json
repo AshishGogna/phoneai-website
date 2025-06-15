@@ -1,0 +1,11 @@
+{
+  "name": "aicalla-landing-page",
+  "version": "1.0.0",
+  "description": "Phone AI Landing Page",
+  "scripts": {
+    "generate-favicons": "node generate-favicons.js"
+  },
+  "dependencies": {
+    "sharp": "^0.33.0"
+  }
+}
