@@ -225,6 +225,10 @@ nav a:hover::after {
     width: 100%;
 }
 
+nav .btn-outline::after {
+    display: none;
+}
+
 /* Hero Section */
 .hero {
     padding: 12rem 0 8rem;
@@ -236,7 +240,7 @@ nav a:hover::after {
 .hero-content {
     display: flex;
     align-items: center;
-    gap: 4rem;
+    gap: 0rem;
     flex-wrap: wrap;
 }
 
@@ -366,21 +370,85 @@ nav a:hover::after {
 
 .hero .cta-buttons {
     justify-content: flex-start;
+    gap: 0
 }
 
 .cta-buttons {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     gap: 1.5rem;
     margin: 2rem 0 4rem 0;
     flex-wrap: wrap;
 }
 
+.download-badge {
+    /* display: inline-block;
+    transition: transform 0.2s ease; */
+}
+
+.download-badge-ios {
+    height: 80px;
+}
+
+.download-badge-android {
+    height: 120px;
+    margin-top: -0.6rem;
+}
+
+.download-badge:hover {
+    transform: translateY(-2px);
+}
+
+.download-badge img {
+    height: 100%;
+    width: auto;
+}
+
+/* Adjust Google Play badge to match height of App Store badge */
+.google-play-badge {
+    height: 60px; /* Slightly taller to match visual weight */
+    margin-top: -10px; /* Adjust vertical alignment */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cta-buttons {
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .download-badge {
+        height: 36px;
+    }
+    
+    .google-play-badge {
+        height: 54px;
+        margin-top: -8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .download-badge {
+        height: 32px;
+    }
+    
+    .google-play-badge {
+        height: 48px;
+        margin-top: -6px;
+    }
+}
+
 .phone-mockup {
-    position: relative;
-    max-width: 300px;
-    margin: 0 auto;
-    padding: 2rem;
+position: relative;
+max-width: 300px;
+margin: 0 auto;
+padding: 2rem;
+background: rgba(255, 255, 255, 0.1);
+border-radius: 40px;
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.2);
+box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
     background: rgba(255, 255, 255, 0.1);
     border-radius: 40px;
     backdrop-filter: blur(10px);
