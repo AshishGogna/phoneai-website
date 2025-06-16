@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Phone AI</title>
+    <meta name="description" content="Get in touch with the Phone AI team. We'd love to hear from you!">
+    
+    <!-- Favicon and styles -->
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-hero {
+            padding: 6rem 0;
+            text-align: center;
+        }
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .about-section {
+            margin: 3rem 0;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .value-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="blur-circle-1"></div>
+    <div class="blur-circle-2"></div>
+    
+    <header class="glass-nav">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Phone AI Logo" class="logo-img">
+                <span class="logo-text">Phone AI</span>
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#features">Features</a>
+                <a href="#use-cases">Use Cases</a>
+                <a href="index.html#download" class="btn btn-outline">Download Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-content contact-content">
+            <div class="container">
+                <div class="about-section">
+                    <h2>Contact</h2>
+
+                    <p>Have questions, feedback, need any help, or just wanna say hello? I'm available!</p>
+                    <p>Shoot an email at:</p>
+                    <div style="text-align: center; width: 100%; margin: 2rem 0;">
+                        <a href="#" id="emailLink" class="contact-email"></a>
+                    </div>
+    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Phone AI Logo" class="logo-img">
+                        <div class="footer-logo">
+                            <span>Phone AI</span>
+                            <span class="footer-logo-text">The future of phone calls.</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-links-group">
+                        <h4>Product</h4>
+                        <a href="index.html#features">Features</a>
+                        <a href="index.html#use-cases">Use Cases</a>
+                        <a href="index.html#pricing">Pricing</a>
+                    </div>
+                    <div class="footer-links-group">
+                        <h4>Company</h4>
+                        <a href="about.html">About Us</a>
+                        <!-- <a href="#">Blog</a> -->
+                    </div>
+                    <div class="footer-links-group">
+                        <h4>Support</h4>
+                        <!-- <a href="#">Help Center</a> -->
+                        <a href="contact.html">Contact Us</a>
+                        <a href="https://guerrillalabs-my.sharepoint.com/:w:/g/personal/gogna_guerrillalabs_in/EX3DExN1qWNCgZj6bA6NXkcB89PISl1HU3AJhsk5BDW7fg" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Phone AI. All rights reserved.</p>
+                <!-- <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<script>
+    // Base64 encoded email string
+    const encodedEmail = 'Z29nbmFAZ3VlcnJpbGxhbGFicy5pbg=='; // gogna@guerrillalabs.in
+    const email = atob(encodedEmail);
+    const emailLink = document.getElementById('emailLink');
+    
+    // Set the href mailto link with subject
+    emailLink.href = 'mailto:' + email + '?subject=Phone%20AI%20Inquiry';
+    
+    // Set visible text to email (or something else like "Email me")
+    emailLink.textContent = email;
+</script>

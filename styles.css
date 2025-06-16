@@ -865,6 +865,48 @@ box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
     left: -200px;
 }
 
+.pricing-card {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.pricing-card p {
+    margin-bottom: 0rem;
+}
+
+.pricing-card .btn {
+    margin-top: 1rem;
+    margin-bottom: 10rem;
+}
+
+.about-content .container {
+    align-items: center;
+}
+
+.about-section {
+    text-align: justify;
+    padding-top: 4rem;
+}
+
+.contact-content {
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#emailLink {
+    direction: ltr !important;
+    unicode-bidi: normal !important;
+}
+
+#emailLink:hover {
+    cursor: text;
+}
+
+.contact-content p {
+    text-align: center;
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
     h1 {
