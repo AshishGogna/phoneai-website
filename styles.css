@@ -438,6 +438,18 @@ nav .btn-outline::after {
     margin-right: auto;
 }
 
+.try-text {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #666; /* softer gray to show it's secondary info */
+    font-style: italic;
+    /* text-decoration: underline; */
+  }
+.try-text strong {
+    color: #16a34a; /* your brand green */
+    font-style: normal;
+}
+
 .hero .cta-buttons {
     justify-content: flex-start;
     gap: 0
