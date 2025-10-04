@@ -1164,3 +1164,46 @@ box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
     display: inline-block;
   }
   
+  .pricing-table-container {
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    margin-bottom: 100px;
+    /* width: 100px; */
+  }
+  
+/* Center the pricing table */
+.pricing-table {
+    width: 50%;
+    margin: 0 auto; /* centers horizontally */
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  
+  /* Optional: keep it readable on small screens */
+  @media (max-width: 768px) {
+    .pricing-table {
+      width: 100%;
+      max-width: 520px;
+    }
+  }
+  
+  .pricing-table th,
+  .pricing-table td {
+    padding: 1rem 1.25rem;
+    text-align: left;
+  }
+  
+  .pricing-table tr + tr th,
+  .pricing-table tr + tr td {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .pricing-table th {
+    color: var(--text);
+    font-weight: 600;
+  }
+  
+  .pricing-table td {
+    color: var(--text-light);
+    font-weight: 500;
+  }
